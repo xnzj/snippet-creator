@@ -71,6 +71,7 @@ class SnippetsManager {
             // Edit the snippet json file by inserting the snippet entry
             let path = snippet.name
             let snippetEntry = {
+            	scope: '',
                 prefix: snippet.prefix,
                 body: snippet.body,  // array of strings
                 description: snippet.description
