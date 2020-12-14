@@ -28,7 +28,7 @@ class SnippetsManager {
                 break;
         }
 
-        let snippetFile = settingsPath + util.format("snippets%s.json", directorySeparator + snippet.language);
+        let snippetFile = settingsPath + util.format("snippets%s.code-snippets", directorySeparator + 'global');
 
         if (!fs.existsSync(snippetFile)) {
             fs.openSync(snippetFile, "w+");
