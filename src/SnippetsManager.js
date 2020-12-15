@@ -79,10 +79,10 @@ class SnippetsManager {
             let options = {
                 formattingOptions: {
                     // If indentation is based on spaces (`insertSpaces` = true), then what is the number of spaces that make an indent?
-                    tabSize: 2,  // based on default vscode snippet format
+                    tabSize: 4,  // based on default vscode snippet format
 
                     // Is indentation based on spaces?
-                    insertSpaces: false,
+                    insertSpaces: true,
 
                     // The default 'end of line' character
                     eol: ''
