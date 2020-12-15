@@ -43,7 +43,7 @@ function activate(context) {
 				}
 				snippet.prefix = prefix;
                 snippet.description = '';
-                selectedText = selectedText.replace(/\$/g, '$$$');
+                selectedText = selectedText.replace(/\$/g, '\\\\$');
 				// return vscode.window.showInputBox({ prompt: 'Enter snippet description' });
 			})
 			// .then( description => {
