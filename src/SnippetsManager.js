@@ -27,8 +27,8 @@ class SnippetsManager {
                 settingsPath = process.env.HOME + `/.config/${vscode_subdir}/User/`;
                 break;
         }
-
-        let snippetFile = settingsPath + util.format("snippets%s.code-snippets", directorySeparator + 'global');
+        let filename = 'global.code-snippets';
+        let snippetFile = settingsPath + 'snippets' + directorySeparator + filename;
 
         if (!fs.existsSync(snippetFile)) {
             fs.openSync(snippetFile, "w+");
@@ -91,7 +91,7 @@ class SnippetsManager {
             let edit = jsonc.modify(jsonText, [path], snippetEntry, options); // create the 'edit'
             let fileContent = jsonc.applyEdits(jsonText, edit); // apply the 'edit'
             fs.writeFile(snippetFile, fileContent, () => { });
-            vscode.window.showInformationMessage(`Snippet '${snippet.prefix}' added to '${snippet.language}.json' snippets.`)
+            vscode.window.showInformationMessage(`Snippet '${snippet.prefix}' added to ${filename}.`)
         });
 
     }
